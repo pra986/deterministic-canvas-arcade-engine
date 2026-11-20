@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deterministic-canvas-arcade-engine"
+version = "0.1.0"
+description = "Frame-rate-independent delta-time browser arcade physics engine with tab-blur pausing and headless verification."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.7.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
