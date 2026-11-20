@@ -1,0 +1,30 @@
+{
+  "project": "deterministic-canvas-arcade-engine",
+  "cases": [
+    {
+      "id": "frame_rate_invariance_30_vs_120",
+      "description": "Total horizontal displacement over 1.0s at 30fps matches 120fps.",
+      "fps_a": 30,
+      "fps_b": 120,
+      "duration_seconds": 1.0,
+      "tolerance": 1e-6
+    },
+    {
+      "id": "tab_blur_pause",
+      "description": "Simulation step does not advance player or projectiles while tab is blurred.",
+      "tab_blurred": true,
+      "expected_paused": true
+    },
+    {
+      "id": "aabb_collision_score",
+      "description": "Projectile overlapping target increments score and clears projectile.",
+      "expected_score_delta": 100
+    },
+    {
+      "id": "clean_restart",
+      "description": "Restart resets score, position, projectiles, and input flags.",
+      "expected_score": 0,
+      "expected_projectiles": 0
+    }
+  ]
+}
